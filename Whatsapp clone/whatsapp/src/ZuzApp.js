@@ -1,11 +1,21 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import { connect} from "react-redux";
 import Splash from './Pages/Splash';
+import Messenger from './Pages/Messenger';
+import {BrowserRouter} from "react-router-dom";
 import "./css/App.scss"
  const ZuzApp = (props) => {
-    const { loaded } = props;
+    const { loaded ,setState } = props;
+    useEffect(() =>{
+        setTimeout(()=>{
+         setState(true)
+        },1000)
+    },[])
   return (
-    loaded ? <div>App is Loaded</div> : <Splash/>
+    <BrowserRouter>
+   { loaded ? <Messenger/> : <Splash/>}
+    </BrowserRouter>
+    
   )
 }
 
