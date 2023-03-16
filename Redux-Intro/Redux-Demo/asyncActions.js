@@ -40,7 +40,7 @@ const reducer = (state = initialState ,action)=>{
                 ...state,
                 loading: true
             }
-        case FETCH_USERS_REQUEST:
+        case FETCH_USERS_SUCCESS:
              return {
                 loading: false,
                 users : action.payload,
