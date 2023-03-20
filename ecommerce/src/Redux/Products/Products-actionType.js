@@ -1,6 +1,3 @@
-// export const PRODUCT_REQUEST = 'PRODUCT_REQUEST';
-// export const PRODUCT_SUCCESS = 'PRODUCT_SUCCESS';
-// export const PRODUCT_ERROR = 'PRODUCT_ERROR';
 
 export const SET_PRODUCTS = 'SET_PRODUCTS';
 export const SELECTED_PRODUCTS = 'SELECTED_PRODUCTS';
