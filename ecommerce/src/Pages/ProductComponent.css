@@ -1,0 +1,16 @@
+.Container{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+.Image{
+    height: 60%;
+}
+.Image img{
+    width: 100%;
+    height: 100%;
+}
+.Content{
+    font-family: 'Courier New', Courier, monospace;
+}

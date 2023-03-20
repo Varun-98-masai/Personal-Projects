@@ -1,37 +1,14 @@
-import { PRODUCT_ERROR, PRODUCT_REQUEST, PRODUCT_SUCCESS } from "./Products-actionType"
+import { SET_PRODUCTS } from "./Products-actionType"
 
-const initialState = {
-    products :[],
-    error: '',
-    success: false
+const initialState ={
+    products: [],
 }
 
-const productReducer = (state = initialState, {type, payload}) =>{
-    switch(type){
-        case PRODUCT_REQUEST:
-            return {
-                ...state,
-                product: [],
-                success: false,
-
-            }
-        case PRODUCT_SUCCESS:{
-            return{
-                ...state,
-                error: '',
-                success: true,
-                products: payload
-            }
-        }  
-        case PRODUCT_ERROR:{
-            return {
-                ...state,
-                error: payload,
-                success: false,
-                
-            }
-        }  
-    default: return state      
-    }
-} 
-export default productReducer;
+export const productReducer = ( state = initialState , action) =>{
+   switch(action.type){
+    case SET_PRODUCTS: 
+        return {...state, products: action.payload};
+    default : 
+        return state;
+   }
+}

@@ -1,22 +1,14 @@
-import { PRODUCT_REQUEST } from "./Products-actionType"
+import {SELECTED_PRODUCTS , SET_PRODUCTS} from './Products-actionType'
 
-
-export const productRequest = (products) =>{
-   return {
-    type: PRODUCT_REQUEST,
-
+export const setProducts = (products) => {
+   return{
+    type: SET_PRODUCTS,
+    payload: products
    }
 }
-export const productSuccess = (products) =>{
-    return {
-     type: PRODUCT_REQUEST,
-     payload: products
-    }
- }
-
- export const productError = (Error) =>{
-    return {
-     type: PRODUCT_REQUEST,
-     payload: Error
-    }
- }
+export const selectedProducts = (product) => {
+     return{
+        type: SELECTED_PRODUCTS,
+        payload: product
+     }
+}
