@@ -6,7 +6,7 @@ const ProductComponent = () => {
     const products = useSelector((state) => state.allProducts.products);
    console.log(products);
     const renderList = products.map((product) =>{
-        const {id, title, images,price } = product;
+        const {id, title, image,price } = product;
        
         return (
             <div>
@@ -14,7 +14,7 @@ const ProductComponent = () => {
             <div className='Container'>
 
                 <div className='Image'>
-                    <img src={images[0]} alt={title} />
+                    <img src={image} alt={title} />
                 </div>
                 <div className='Content'>
                     <h2 className='header'>{title}</h2>
