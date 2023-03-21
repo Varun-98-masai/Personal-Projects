@@ -4,3 +4,36 @@
     padding: 30px;
     gap: 30px;
 }
+.Btn_Div button{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 668px) and (max-width: 979px) {
+    .listing{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding: 30px;
+        gap: 30px;
+    }
+}
+@media screen and (min-width: 400px)and (max-width: 668px) {
+    .listing{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 30px;
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .listing{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 30px;
+        gap: 30px;
+    }
+}
