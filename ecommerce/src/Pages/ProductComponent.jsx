@@ -4,12 +4,14 @@ import {Link} from "react-router-dom"
 import "./ProductComponent.css"
 const ProductComponent = () => {
     const products = useSelector((state) => state.allProducts.products);
-   console.log(products);
+    console.log(products);
     const renderList = products.map((product) =>{
         const {id, title, image,price } = product;
        
         return (
+            
             <div>
+
                 <Link to={`/products/${id}`} >
             <div className='Container'>
 
@@ -25,6 +27,7 @@ const ProductComponent = () => {
             </div>
             </Link>
         </div>
+      
         )
     });
    
