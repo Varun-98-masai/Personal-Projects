@@ -7,6 +7,7 @@
         <div id="rhs">
             <div>Account</div>
             <div id="cart">
+                <q-icon name="shopping_cart"/>
                 <div id="cart_count">
                     1
                 </div>
@@ -40,5 +41,12 @@
         gap: 10%;
         align-content: center;
         justify-content: flex-end;
+    }
+    #cart{
+        display: flex;
+        align-items: center;
+    }
+    #cart_count{
+        padding-bottom: 12px;
     }
 </style>

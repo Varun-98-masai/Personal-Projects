@@ -2,7 +2,7 @@
     <div id="welcome_div">
       
       <h1>{{msg}}</h1>
-     <q-btn color="white" text-color="black" label="Standard" />
+
     </div>
 </template>
 <script setup>
