@@ -1,13 +1,12 @@
 <template>
  <div id="container">
- <HomeVue/>
+ 
+ <router-view></router-view>
  
  </div>
 </template>
 
-<script setup>
-import HomeVue from "./views/Home.vue"
-</script>
+<script setup></script>
 
 <style scoped>
 #container{

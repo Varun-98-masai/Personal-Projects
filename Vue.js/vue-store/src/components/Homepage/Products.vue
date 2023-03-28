@@ -1,20 +1,51 @@
 <template>
   <div id="products">
-    <div v-for="element in products" id="individual_product">
+    <div v-for="element in products" :key="element" id="individual_product">
       <div id="image_div">
         <img :src="element.image" alt="" />
       </div>
       <div>
         <p>{{ element.title }}</p>
         <p>$ {{ element.price }}</p>
-      </div>
+      </div> 
     </div>
+   
   </div>
 </template>
 
 <script setup>
-import ProductData from "../../data/products.json";
-const products = ProductData;
+// import ProductData from "../../data/products.json";
+import { ref, onMounted } from "vue";
+let products = ref([]);
+import axios from "axios";
+// import firebase utilities
+
+import { db, collection, getDocs } from "../../firebase.js";
+console.log("db: " + db);
+
+
+
+
+// onMounted
+const getData = async() => {
+const querySnapshot = await getDocs(collection(db, "vuestore"));
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data());
+});
+}
+onMounted( async() =>{
+  await getData();
+});
+
+onMounted(async () => {
+  
+  let res = await axios.get('http://fakestoreapi.com/products');
+  let data = res.data;
+  console.log(data);
+  products.value = data;
+})
+
 </script>
 
 <style scoped>
