@@ -1,13 +1,15 @@
 <template>
-  <div id="products">
-    <div v-for="element in products" :key="element" id="individual_product">
+  <div 
+  
+  id="products"
+  >
+    <div @click="showProduct(product.id)"  v-for="product in products" :key="product" id="individual_product">
       <div id="image_div">
-        <img :src="element.image" alt="" />
+          <img :src=product.imageUrl alt="">
       </div>
-      <div>
-        <p>{{ element.title }}</p>
-        <p>$ {{ element.price }}</p>
-      </div> 
+     
+      <p>{{product.title}}</p>
+      <p>{{product.price}}</p>
     </div>
    
   </div>
@@ -16,35 +18,31 @@
 <script setup>
 // import ProductData from "../../data/products.json";
 import { ref, onMounted } from "vue";
-let products = ref([]);
-import axios from "axios";
-// import firebase utilities
-
+import { useRouter } from "vue-router"
 import { db, collection, getDocs } from "../../firebase.js";
-console.log("db: " + db);
+let products = ref([]);
+const router = useRouter();
 
-
-
-
-// onMounted
-const getData = async() => {
-const querySnapshot = await getDocs(collection(db, "vuestore"));
-querySnapshot.forEach((doc) => {
-  // doc.data() is never undefined for query doc snapshots
-  console.log(doc.id, " => ", doc.data());
-});
-}
 onMounted( async() =>{
-  await getData();
+ const result = await getDocs(collection(db, "vuestore"));
+ result.forEach((doc) => {
+  let product = doc.data();
+  product.id = doc.id;
+  console.log("Products:"+ product);
+
+  products.value.push(product);
+ })
+ console.log("Products:"+ products.value);
 });
 
-onMounted(async () => {
-  
-  let res = await axios.get('http://fakestoreapi.com/products');
-  let data = res.data;
-  console.log(data);
-  products.value = data;
-})
+
+
+const showProduct = (id) =>{
+ console.log(id);
+//  rewrite it to productDetails/id
+
+  router.push(`productDetails/${id}`);
+}
 
 </script>
 
@@ -62,7 +60,8 @@ onMounted(async () => {
   
 }
 #image_div{
-    height: 200px;
+    height: 300px;
+    width: 200px;
 }
 #individual_product{
     width: 150px;

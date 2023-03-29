@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getFirestore, collection, getDocs, addDoc, doc, getDoc } from 'firebase/firestore/lite';
 
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBnP_mRBKjA34-wKJzDbbReR0xqW4gE4tY",
@@ -16,4 +17,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export { app, db, collection, getDocs }
+export { app, db, collection, getDocs,  getStorage, ref, uploadBytesResumable, getDownloadURL, addDoc, doc, getDoc }

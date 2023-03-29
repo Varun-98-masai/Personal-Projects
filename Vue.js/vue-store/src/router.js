@@ -3,6 +3,7 @@
 import  { createRouter, createWebHistory } from "vue-router"
 import Home from "./views/Home.vue";
 import Admin from "./views/Admin.vue";
+import ProductDetails from "./views/ProductDetails.vue"
 
 
 // 2. Define some routes
@@ -11,6 +12,7 @@ import Admin from "./views/Admin.vue";
 const routes = [
   { path: '/', component: Home },
   { path: '/admin', component: Admin },
+  { path: `/productDetails/:id`, component: ProductDetails}
 ]
 
 // 3. Create the router instance and pass the `routes` option
