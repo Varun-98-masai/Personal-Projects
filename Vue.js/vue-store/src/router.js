@@ -4,6 +4,7 @@ import  { createRouter, createWebHistory } from "vue-router"
 import Home from "./views/Home.vue";
 import Admin from "./views/Admin.vue";
 import ProductDetails from "./views/ProductDetails.vue"
+import orders from "./views/orders.vue";
 
 
 // 2. Define some routes
@@ -12,7 +13,8 @@ import ProductDetails from "./views/ProductDetails.vue"
 const routes = [
   { path: '/', component: Home },
   { path: '/admin', component: Admin },
-  { path: `/productDetails/:id`, component: ProductDetails}
+  { path: `/productDetails/:id`, component: ProductDetails},
+  { path: '/orders' , component: orders }
 ]
 
 // 3. Create the router instance and pass the `routes` option

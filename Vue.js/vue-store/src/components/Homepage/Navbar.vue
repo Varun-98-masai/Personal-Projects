@@ -7,10 +7,11 @@
         <div id="rhs">
             <div>Account</div>
             <div id="cart">
-                <q-icon name="shopping_cart"/>
+                <q-icon @click="dialog = !dialog" name="shopping_cart"/>
                 <div id="cart_count">
-                    1
+                    {{cartStore.cartCount}}
                 </div>
+                <cartPopupComponent :dialogVisibility="dialog"/>
             </div>
         </div>
      </div>
@@ -20,6 +21,13 @@
 </template>
     
 <script setup>
+import { ref } from "vue";
+import { useCartStore } from "../../store.js";
+import  cartPopupComponent  from "../CartComponents/cartPopup.vue";
+
+const cartStore = useCartStore();
+
+const dialog = ref(false)
 
 </script>
 <style scoped>

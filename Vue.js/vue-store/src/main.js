@@ -1,6 +1,7 @@
 // FILE: main.js
 
-import { createApp } from 'vue'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import { Quasar } from 'quasar'
 import router from "./router.js"
 
@@ -14,11 +15,14 @@ import 'quasar/dist/quasar.css'
 // and placed in same folder as main.js
 import App from './App.vue'
 
+const pinia = createPinia();
 const myApp = createApp(App)
 
 myApp.use(Quasar, {
   plugins: {}, // import Quasar plugins and add here
 })
+
+myApp.use(pinia);
 
 myApp.use(router);
 
