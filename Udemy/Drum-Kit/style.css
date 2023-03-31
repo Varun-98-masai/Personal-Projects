@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(25, 25, 83);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#title{
+    font-size: 50px;
+    font-weight: 300;
+}
+.set{
+    display: flex;
+    margin-bottom: 5%;
+    gap: 3%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
+}
+.drum{
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+    font-size: 35px;
+    color: purple;
+    font-weight: 700;
+}
