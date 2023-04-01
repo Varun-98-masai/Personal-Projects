@@ -28,3 +28,29 @@ body{
     color: purple;
     font-weight: 700;
 }
+.w{
+  background-image: url("Images/floor_drum.jpg");
+}
+.a{
+    background-image: url("Images/Hi_hat_2.jpg");
+}
+.s{
+    background-image: url("Images/floor_drum.jpg");
+}
+.d{
+    background-image: url("Images/floor_drum.jpg");
+}
+.j{
+    background-image: url("Images/floor_drum.jpg");
+}
+.k{
+    background-image: url("Images/floor_drum.jpg");
+}
+.l{
+    background-image: url("Images/floor_drum.jpg");
+}
+
+.pressed{
+    box-shadow: 0 3px 4px 0 #DBEDF3 ;
+    opacity: 0.5;
+}
