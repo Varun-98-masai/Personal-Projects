@@ -1,0 +1,62 @@
+.container{
+    margin-top: 200px;
+    text-align: left;
+    margin-bottom: 50px;
+    width: 90%;
+    margin: auto;
+}
+.calender{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h2{
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.social{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+h4{
+    text-align: center;
+}
+.media{
+    margin-bottom: 20px;
+}
+
+
+.linkedin-icon{
+    display: flex;
+    /* flex-direction: row; */
+    text-align: left;
+    justify-content: center;
+}
+.linkedin-icon p{
+    font-size: 14px;
+}
+@media screen and (max-width:950px) {
+    .social{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width:850px) {
+    .calender{
+        block-size: 8;
+    }
+    .social{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:500px) {
+    .social{
+        display: flex;
+        flex-direction: column;
+    }
+}

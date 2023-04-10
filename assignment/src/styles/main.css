@@ -8,10 +8,10 @@
   }
 
   :root{
-    --mainColor: #29335C;
+    --mainColor: white;
     --mainColorLoght: #5970ca;
-    --secondaryColor: #DB2B39;
-    --textColor: #eee;
+    --secondaryColor: orange;
+    --textColor: hsl(0, 3%, 14%);
   }
 
   header{
@@ -22,12 +22,19 @@
     padding: 0 2rem;
     background-color: var(--mainColor);
     color: var(--textColor);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .logo{
+    width: 200px;
+    height: 60px;
   }
 
   nav a{
     margin: 0 2rem;
     color: var(--textColor);
     text-decoration: none;
+    font-size: 18px;
+    font-weight: 550;
   }
 
   nav a:hover{
@@ -45,8 +52,36 @@
     opacity: 0;
     font-size: 1.8rem;
   }
+  .explore_btn{
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 550;
+    color: white;
+  }
+  @media only screen and ( max-width: 1000px ) {
+      /* header{
+        display: grid;
+        grid-template-columns: repeat(30% 70%);
+      } */
+      nav{
+        display: none;
+      }
+      .explore_btn{
+        display: none;
+      }
+  }
+  @media only screen and (max-width: 768px){
+    .logo{
+      width: 135px;
+      height: 50px;;
+    }
+  }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 500px) {
     header .nav-btn{
     visibility: visible;
     opacity: 1;
@@ -66,16 +101,18 @@
         transition: 1s;
         transform: translate(-100vh) ;
     }
-
     header .responsive_nav{
-        transform: none;
+       transform: none;
     }
     nav .nav-close-btn{
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
     }
     nav a{
         font-size: 1.5rem;
     }
+   
   }
+
+ 

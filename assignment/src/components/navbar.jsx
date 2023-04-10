@@ -1,27 +1,35 @@
 import React, { useRef } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import "../styles/main.css"
+import "../styles/main.css";
+import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../Cipher_logo.png"
 
 const Navbar = () => {
     const ref = useRef();
-
+    
     const showNavbar = () =>{
-         ref.current.classList.toggle("responsive_nav");
+        ref.current.classList.toggle("responsive_nav")
     }
+   
   return (
     <header>
-        <h3>Logo</h3>
-        <nav ref={ref}>
-            <a href="/#"> home </a>
-            <a href="/#"> About </a>
-            <a href="/#"> Contact </a>
-            <a href="/#"> Details </a>
-            <button className='nav-btn nav-close-btn' onClick={showNavbar}>
-                <FaTimes/>
-            </button>
+        <img src={logo} alt="cipher_logo" className='logo' />
+            <nav ref={ref}>
+            <a href="/#"> Home </a>
+            <a href="/#"> Creater Access </a>
+            <a href="/#"> Live Reviews </a>
+            <a href="/#"> Community </a>
+           
+        <button className='nav-btn nav-close-btn' onClick={showNavbar}>
+        <FaTimes />
+        </button>
         </nav>
-        <button className='nav-btn' onClick={showNavbar}>
-            <FaBars />
+        <button className='explore_btn'>
+                Explore Courses
+        </button>
+       
+
+        <button className='nav-btn' onClick={showNavbar}>  
+        <FaBars />
         </button>
     </header>
   )
