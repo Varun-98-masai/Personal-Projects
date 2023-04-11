@@ -1,14 +1,16 @@
 import React from 'react';
 // import './App.css';
 import Navbar from './components/navbar';
-import ContributionCalendar from './components/calender';
+
+import  Router  from './components/allroutes';
 
 function App() {
   return (
     <div className="App">
-    
       <Navbar/>
-      <ContributionCalendar/>
+      <Router/>
+      
+     
     </div>
   );
 }
