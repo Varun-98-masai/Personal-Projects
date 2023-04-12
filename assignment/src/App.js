@@ -1,7 +1,7 @@
 import React from 'react';
 // import './App.css';
 import Navbar from './components/navbar';
-
+import Footer  from './components/footer';
 import  Router  from './components/allroutes';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Navbar/>
       <Router/>
       
-     
+      <Footer/>
     </div>
   );
 }

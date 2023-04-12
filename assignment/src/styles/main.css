@@ -23,7 +23,6 @@
     background-color: var(--mainColor);
     color: var(--textColor);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-   
   }
   .logo_div{
     display: flex;
@@ -103,9 +102,11 @@ form input{
 
 
   @media only screen and (max-width: 500px) {
+   
     header .nav-btn{
     visibility: visible;
     opacity: 1;
+  
     }
     header nav{
         position: fixed;
@@ -129,6 +130,7 @@ form input{
       position: absolute;
       top: 2rem;
       right: 2rem;
+      background-color: beige;
     }
     nav a{
         font-size: 1.5rem;

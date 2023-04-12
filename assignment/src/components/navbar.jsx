@@ -69,7 +69,7 @@ const Navbar = () => {
         <h3>Cipher Schools</h3>
       </div>
 
-      <nav ref={ref}>
+       <nav ref={ref}>
         <Link to="/"> Home </Link>
         <Link to="/profile"> My Profile</Link>
         <a href="/#"> Live Reviews </a>

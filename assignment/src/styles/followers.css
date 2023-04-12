@@ -1,0 +1,53 @@
+.container{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   text-align: center;
+}
+.followers{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   padding: 40px 0;
+   gap: 40px;;
+}
+.followers img{
+    margin-top: 100px;
+    width:350px
+}
+.followers button{
+   color: #222831;
+   background-color: rgba(212,132,50,.2);
+   border: none;
+   padding: 10px 20px;
+   border-radius: 10px;
+}
+
+.login_form form input {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  height: 40px;
+  border: none;
+}
+.login_form img{
+    width: 200px;
+    margin-bottom: 30px;
+}
+.login_form>div:first-child{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   margin: auto;
+}
+.login_form>div:last-child h4{
+   color: rgba(8,15,15,.85);
+   font-size: 18px;
+}
+.login_form>div:last-child p{
+    color:  rgba(8,15,15,.75);
+   
+ }
+
+

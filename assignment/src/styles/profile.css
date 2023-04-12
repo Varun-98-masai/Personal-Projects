@@ -27,7 +27,7 @@
 .followers{
     display: flex;
     align-items: center;
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 .followers h2, .map h2{
     font-size: 21px;
@@ -74,4 +74,9 @@
 }
 input{
     padding-left: 10px;
+}
+@media only screen and (max-width: 1000px){
+    .information h2{
+        display: none;
+    }
 }

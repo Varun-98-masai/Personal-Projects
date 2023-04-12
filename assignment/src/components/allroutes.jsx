@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Profile from "./profile"
 import Home from './home';
 import Followers from './followers';
+import Register from './register';
 
 const Router = () => {
   return (
@@ -10,6 +11,7 @@ const Router = () => {
     <Route path='/' element={<Home/>} />
     <Route  path='/profile' element={<Profile/>}/>
     <Route path='/followers' element={<Followers/>} />
+    <Route  path='/register' element={<Register/>}/>
    </Routes>
   )
 }
