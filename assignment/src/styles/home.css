@@ -1,9 +1,8 @@
-.container{
+.container-main{
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
-   
 }
 .students{
     position: relative;
@@ -72,7 +71,7 @@
     font-weight: 600;
 }
 @media only screen and (max-width: 1024px) {
-    .container{
+    .container-main{
         display: flex;
         flex-direction: column;
         gap: 20px;

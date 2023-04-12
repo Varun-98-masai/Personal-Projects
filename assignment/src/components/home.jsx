@@ -16,7 +16,7 @@ const Home = () => {
     <div style={{ marginBottom: "50px" }}>
       <HeroImage />
 
-      <div className="container">
+      <div className="container-main">
         <div className="students">
           <img src={student} alt="" />
           <div>
@@ -34,22 +34,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-       {/* <div  className="carousel-wrapper">
-       <Carousel2>
-        <div  className="container-1">
-          <img src="https://ik.imagekit.io/cipherschools/CipherMentors/Rajan-Coding_Mentor.png" alt="" />
-        </div>
-        <div  className="container-1">
-          <img src="https://ik.imagekit.io/cipherschools/CipherMentors/Sagar-Adobe.png" alt="" />
-          </div>
-        <div  className="container-1">Container 3</div>
-        <div  className="container-1">Container 4</div>
-        <div className="container-1">Container 5</div>
-        <div className="container-1">Container 6</div>
-        <div className="container-1">Container 7</div>
-        <div className="container-1">Container 8</div>
-      </Carousel2>
-       </div> */}
+       
       <Courses />
 
       <div className="container2">
