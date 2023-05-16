@@ -1,15 +1,23 @@
 import React from 'react'
 import '../App.css';
+import Avatar from './Avatar';
+import Detail from "./Detail";
 const Card = (props) => {
   return (
     <div className='card'>
         <div className='top'>
         <h3 className='name'>{props.name}</h3>
-        <img src={props.img} alt="image.png" className='circle-image' />
+        <Avatar img={props.img}/>
         </div>
         <div className='bottom'>
-        <p className='info'>{props.tel}</p>
-        <p className='info'>{props.email}</p>
+        <Detail
+        personalinfo={props.tel}
+       
+         />
+          <Detail
+        personalinfo={props.email}
+       
+         />
         </div>
        
     </div>
