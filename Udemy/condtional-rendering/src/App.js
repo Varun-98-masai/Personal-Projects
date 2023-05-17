@@ -1,15 +1,17 @@
 import './App.css';
-import Form from './component/Form';
+// import Login from './component/Login';
+import Registerd from './component/Registered';
 
-var isLoggedIn = false;
+// var isLoggedIn = false;
+var userIsRegistered = false;
 const currentTime = new Date().getHours();
 console.log(currentTime);
 
 function App() {
   return (
     <div className="App">
-      {/* { isLoggedIn ? <h1 className="heading">Hello</h1> : <Form/>} */}
-    { currentTime > 11 &&   <h1 className='heading'>Why Are You Here</h1> }
+       <Registerd isRegistered={userIsRegistered}/>
+    
     </div>
   );
 }
