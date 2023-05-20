@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttling</title>
+</head>
+<body>
+    <input type="text" id="throttle">
+</body>
+<script>
+let input = document.getElementById("throttle");
+let c= 0;
+const expensive = () => {
+    console.log("expensive function is called", c++ );
+}
+
+
+
+
+const throttle = (func, limit) => {
+    let flag = true;
+    return function() {
+        if(flag){
+            func.apply(this, arguments);
+            flag = false;
+            setTimeout(() => {
+                flag = true;
+            }, limit)
+        }
+        
+    }
+
+}
+
+const better = throttle(expensive, 500)
+
+input.addEventListener("keyup", better);
+
+
+
+</script>
+  
+</html>
